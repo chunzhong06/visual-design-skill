@@ -1,0 +1,950 @@
+{
+  "version": "1.11.0",
+  "checked_on": "2026-11-08",
+  "groups": {
+    "tradition": "平面设计传统",
+    "work-language": "工作传播视觉语言",
+    "print": "编辑与印刷称呼",
+    "technical": "技术演示视觉语言"
+  },
+  "dimensions": [
+    "色彩",
+    "线条",
+    "造型",
+    "光影",
+    "材质",
+    "字体气质"
+  ],
+  "purpose": "名称解释与参数转译；本文件中的名称不计作新增视觉配方，也不执行最终风格选择。",
+  "ambiguous_aliases": {},
+  "context_terms": [
+    {
+      "term": "复古",
+      "aliases": [
+        "复古",
+        "Retro",
+        "Vintage"
+      ],
+      "interpretations": [
+        "印刷或胶片处理",
+        "特定年代的形态与色彩",
+        "一般怀旧氛围"
+      ],
+      "action": "按内容与参考选择，不自动指定年代或强制做旧。"
+    },
+    {
+      "term": "未来感",
+      "aliases": [
+        "未来感",
+        "Futuristic"
+      ],
+      "interpretations": [
+        "克制的现代技术视觉",
+        "工业或实验性形态",
+        "光色与材质处理"
+      ],
+      "action": "按真实内容形成参数，不默认霓虹、假代码或终端。"
+    },
+    {
+      "term": "手绘",
+      "aliases": [
+        "手绘",
+        "Hand Drawn"
+      ],
+      "interpretations": [
+        "钢笔或马克笔线条",
+        "水彩等手绘媒介",
+        "自然不规则的图形边缘"
+      ],
+      "action": "按用途选必要媒介，不自动加入卡通人物。"
+    }
+  ],
+  "sources": {
+    "original": {
+      "title": "Nihilist-ZIO/prompt-library：艺术提示词",
+      "url": "https://github.com/Nihilist-ZIO/prompt-library/blob/main/cat_%E8%89%BA%E6%9C%AF.md",
+      "kind": "prompt",
+      "scope": "已读具体提示词；借鉴视觉描述，未照搬完整提示词、内容或版式。"
+    },
+    "swiss-prompt": {
+      "title": "AI Image Prompts：瑞士字体模板",
+      "url": "https://github.com/horushe93/ai-image-prompts/blob/master/styles/minimalist-grid-swiss-typography/prompt-template.json",
+      "kind": "prompt",
+      "scope": "已读具体模板；将秩序、字形与表面参数分开。"
+    },
+    "duotone-prompt": {
+      "title": "AI Image Prompts：双色平面模板",
+      "url": "https://github.com/horushe93/ai-image-prompts/blob/master/styles/duotone-bento-box-brutalist-poster/prompt-template.json",
+      "kind": "prompt",
+      "scope": "已读具体模板；双色影像归配方，Bento归方法。"
+    },
+    "pop-prompt": {
+      "title": "AI Visual Prompt Cookbook：爆发网点",
+      "url": "https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook/blob/main/styles/impact-burst-halftone-comic-poster-style/style.json",
+      "kind": "prompt",
+      "scope": "已读具体style.json；网点漫画是波普的一种转译。"
+    },
+    "bauhaus": {
+      "title": "Letterform Archive：Bauhaus Typography",
+      "url": "https://exhibitions.letterformarchive.org/bauhaus/exhibit/introduction",
+      "kind": "institution",
+      "scope": "已读展览文字；无衬线、不对称秩序、留白与摄影等，不限于原色几何。"
+    },
+    "bauhaus-moma": {
+      "title": "MoMA：Bauhaus Graphic Design",
+      "url": "https://www.moma.org/explore/inside_out/2009/11/06/bauhaus-the-graphic-design-department-goes-back-to-school/",
+      "kind": "institution",
+      "scope": "已读设计部门文章；避免将原色、特定字体与基本形状当成唯一公式。"
+    },
+    "swiss": {
+      "title": "Design Museum：Wim Crouwel",
+      "url": "https://designmuseum.org/designers/wim-crouwel",
+      "kind": "institution",
+      "scope": "已读关于瑞士设计影响及清晰、网格、系统性的方法描述。"
+    },
+    "constructivism": {
+      "title": "Tate：Constructivism",
+      "url": "https://www.tate.org.uk/art/art-terms/c/constructivism?entryId=75",
+      "kind": "institution",
+      "scope": "已核对构造、工业与抽象的运动定义；平面色彩和对角组织为本技能工作转译，不概括全部历史作品。"
+    },
+    "de-stijl": {
+      "title": "Tate：De Stijl",
+      "url": "https://www.tate.org.uk/art/art-terms/d/de-stijl",
+      "kind": "institution",
+      "scope": "已核对几何抽象、横竖与斜线分歧；不把单一作者规则泛化为整个运动。"
+    },
+    "art-deco": {
+      "title": "V&A：An introduction to Art Deco",
+      "url": "https://www.vam.ac.uk/articles/an-introduction-to-art-deco",
+      "kind": "institution",
+      "scope": "已读文章片段；混合来源、几何与装饰，不限定黑金配色。"
+    },
+    "art-nouveau": {
+      "title": "V&A：Art Nouveau, an international style",
+      "url": "https://www.vam.ac.uk/articles/art-nouveau-an-international-style",
+      "kind": "institution",
+      "scope": "已读文章片段；自然形式、流动线、结构与装饰的结合。"
+    },
+    "memphis": {
+      "title": "Design Museum：Memphis",
+      "url": "https://designmuseum.org/memphis",
+      "kind": "institution",
+      "scope": "已读孟菲斯材料、图案与色彩的描述；下列平面参数为工作转译。"
+    },
+    "pop-art": {
+      "title": "Tate：Pop art",
+      "url": "https://www.tate.org.uk/art/art-terms/p/pop-art",
+      "kind": "institution",
+      "scope": "已核对流行与商业文化来源；不把漫画网点当成整个运动。"
+    },
+    "minimalism": {
+      "title": "Tate：Minimalism",
+      "url": "https://www.tate.org.uk/art/art-terms/minimalism",
+      "kind": "institution",
+      "scope": "已核对艺术运动定义；日常设计里的简约另按使用语境转译。"
+    },
+    "flat": {
+      "title": "NN/g：Flat Design",
+      "url": "https://www.nngroup.com/articles/flat-design/",
+      "kind": "practice",
+      "scope": "已读平面化、拟物对照与识读讨论；PPT适配为本技能转译。"
+    },
+    "neobrutalism": {
+      "title": "NN/g：Neobrutalism",
+      "url": "https://www.nngroup.com/articles/neobrutalism/",
+      "kind": "practice",
+      "scope": "已读粗边框、强反差、硬阴影与识读取舍；不同于新拟物。"
+    },
+    "riso": {
+      "title": "AI Visual Prompt Cookbook：everyday-riso",
+      "url": "https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook/blob/main/styles/everyday-riso/style.json",
+      "kind": "prompt",
+      "scope": "已读具体style.json；提炼少色叠印、颗粒与纸面，不复制固定对象与版式。"
+    },
+    "work-presets": {
+      "title": "slides-ai-plugin：专业演示Style Presets",
+      "url": "https://github.com/proyecto26/slides-ai-plugin/blob/main/skills/slide-design/references/style-presets.md",
+      "kind": "practice",
+      "scope": "已读完整12种预设及签名特征；只转译适合工作交付的参数，不复制CSS、品牌色值或上游用词偏好。"
+    },
+    "work-ppt-images": {
+      "title": "PPT-Design-Prompt：DESIGN.md",
+      "url": "https://github.com/Russell-cell/PPT-Design-Prompt/blob/main/DESIGN.md",
+      "kind": "practice",
+      "scope": "已读实际设计规范；借鉴单页主旨、素材角色、文字安全区与成套一致性，不照搬其隐喻偏好或像素尺寸。"
+    },
+    "work-poster-image": {
+      "title": "open-design：image-poster",
+      "url": "https://github.com/nexu-io/open-design/blob/main/design-templates/image-poster/SKILL.md",
+      "kind": "practice",
+      "scope": "已读具体模板；借鉴先主体与构图、再光影及媒介的分工，不执行其工具或安装指令。"
+    },
+    "work-editorial": {
+      "title": "open-design：magazine-poster",
+      "url": "https://github.com/nexu-io/open-design/blob/main/design-templates/magazine-poster/SKILL.md",
+      "kind": "practice",
+      "scope": "已读实际模板；提炼字形、纸面与编辑气质，栏目数量、删线字与版式不作通用规则。"
+    },
+    "work-ibm": {
+      "title": "2slides：IBM heritage Prompt Text",
+      "url": "https://github.com/2slides/awesome-nano-banana-ppt-prompts/blob/main/prompts/ibm-style-with-the-paul-rand-heritage-look/prompt.md",
+      "kind": "prompt",
+      "scope": "已读实际Prompt Text；提炼企业现代主义、少色几何与统一图形语法，不复制IBM身份、条纹标志或专用色。"
+    },
+    "work-blueprint": {
+      "title": "2slides：Blueprint & Pop Logic Prompt Text",
+      "url": "https://github.com/2slides/awesome-nano-banana-ppt-prompts/blob/main/prompts/color-palette-blueprint-pop-logic/prompt.md",
+      "kind": "prompt",
+      "scope": "已读实际Prompt Text；只取精细技术线、低纹理底及受控高亮；不采纳必须6—7格、微小文字、假坐标、条码和伪参数。"
+    },
+    "work-skiff": {
+      "title": "Pentagram：Skiff",
+      "url": "https://www.pentagram.com/work/skiff",
+      "kind": "case-study",
+      "scope": "已读设计方关于现代主义、清楚字形、信任与产品定位的说明；网页视觉预览未成功，不声称逐图审阅。"
+    },
+    "work-atera": {
+      "title": "COLLINS：Atera",
+      "url": "https://wearecollins.com/case-studies/atera/",
+      "kind": "case-study",
+      "scope": "已读设计方关于产品定位、模块化图形语法及工程字形的说明；不复制品牌字形、标志或营销结果。"
+    }
+  },
+  "entries": [
+    {
+      "id": "bauhaus",
+      "name": "包豪斯",
+      "english": "Bauhaus",
+      "group": "tradition",
+      "aliases": [
+        "包豪斯",
+        "Bauhaus",
+        "包豪斯风",
+        "包豪斯风格"
+      ],
+      "meaning": "现代设计传统，既涉及形态与色彩，也涉及字图秩序、材料与功能；几何半调只是可组合的处理。",
+      "essential": "提取清楚的几何关系、字图联系与功能性；允许纯净平面、摄影或有选择的印刷质感。",
+      "method_guidance": "向模块建议不对称平衡、层级和留白；已有版式保留，不能因名称擅自重排节点或裁切正文。",
+      "visual_parameters": {
+        "色彩": "有限色盘与明确反差；可用原色，也可按品牌调整",
+        "线条": "清楚硬边与少量结构线",
+        "造型": "基本几何与主题对象建立联系",
+        "光影": "平涂或受控的摄影明暗",
+        "材质": "干净平面为可用起点；纸纹、网点、磨损均可选",
+        "字体气质": "几何或中性无衬线；字体大小和位置交模块"
+      },
+      "recipe_candidates": [
+        "geometric-flat",
+        "neutral-sans",
+        "editorial-photo",
+        "geometric-print"
+      ],
+      "independent_requirements": "没有印刷要求时自主采用纯净几何，不必读取半调卡；有无纸纹约束时显式关闭纸纹。",
+      "application": "海报可强化形体与标题呼应；PPT用共同几何、颜色和字体，背景降低图形数量，解释图区保持关系。",
+      "do_not_infer": "不自动加入红黄蓝、圆方三角全套、德文、历史年份、网点旧纸或特定人物。",
+      "source_keys": [
+        "bauhaus",
+        "bauhaus-moma",
+        "original"
+      ],
+      "card": "bauhaus.md"
+    },
+    {
+      "id": "swiss-style",
+      "name": "瑞士国际主义",
+      "english": "International Typographic Style",
+      "group": "tradition",
+      "aliases": [
+        "瑞士国际主义",
+        "International Typographic Style",
+        "瑞士风格",
+        "瑞士平面",
+        "Swiss Style",
+        "Swiss Typography",
+        "国际主义平面风格",
+        "瑞士现代",
+        "Swiss Modern"
+      ],
+      "meaning": "以清晰、结构和字体关系见长的平面设计语言；不局限黑白或纯文字。",
+      "essential": "内容层级、对齐关系与易读字体相互支持。",
+      "method_guidance": "网格、字图比例与对齐建议交模块，尊重当前模板；规则网格可承载不对称视觉平衡。",
+      "visual_parameters": {
+        "色彩": "克制色盘，少量信号色",
+        "线条": "准确细线或清楚块边",
+        "造型": "清楚几何及直接摄影",
+        "光影": "平整或自然摄影光",
+        "材质": "低装饰表面，不强加旧纸",
+        "字体气质": "中性无衬线，中文采用协调且易读字形"
+      },
+      "recipe_candidates": [
+        "neutral-sans",
+        "geometric-flat",
+        "editorial-photo"
+      ],
+      "independent_requirements": "字图与留白质量依赖模块；仅应用卡片的媒介纹理无法完成此名称要求。",
+      "application": "适合内容海报和工作PPT；密集图保留层级与连续阅读，不将所有元素等大。",
+      "do_not_infer": "不强制Helvetica品牌字库、黑白、九宫格或单一历史海报复刻。",
+      "source_keys": [
+        "swiss",
+        "swiss-prompt"
+      ],
+      "card": "swiss-style.md"
+    },
+    {
+      "id": "constructivism",
+      "name": "构成主义",
+      "english": "Constructivism",
+      "group": "tradition",
+      "aliases": [
+        "构成主义",
+        "Constructivism",
+        "构成主义风格",
+        "构成派"
+      ],
+      "meaning": "重视构造与抽象的艺术传统；工作海报可转译成有方向的块面与结构关系。",
+      "essential": "让形体组织表达主题的力量与方向，不只套一组红黑斜线。",
+      "method_guidance": "模块可用方向性字图关系和非对称平衡；真实因果、时间顺序与连接不随斜线装饰改变。",
+      "visual_parameters": {
+        "色彩": "可用高反差少色，红黑仅为一种选项",
+        "线条": "硬边、直线与明确方向",
+        "造型": "几何块体与概括对象",
+        "光影": "平面明暗或工业摄影",
+        "材质": "纯色、摄影或受控印刷",
+        "字体气质": "有力量的无衬线，关键信息清楚"
+      },
+      "recipe_candidates": [
+        "bold-type",
+        "geometric-flat",
+        "editorial-collage"
+      ],
+      "independent_requirements": "方向性由内容和组织决定，按需自主构造；不继承来源政治口号。",
+      "application": "海报可有强张力；PPT背景减弱对角冲击，内容图保留实际流向。",
+      "do_not_infer": "不自动加入政治符号、宣传口号、红星或历史人物。",
+      "source_keys": [
+        "constructivism",
+        "original"
+      ],
+      "card": "constructivism.md"
+    },
+    {
+      "id": "de-stijl",
+      "name": "风格派",
+      "english": "De Stijl",
+      "group": "tradition",
+      "aliases": [
+        "风格派",
+        "De Stijl",
+        "新造型主义",
+        "Neo-Plasticism",
+        "Neoplasticism",
+        "蒙德里安式"
+      ],
+      "meaning": "几何抽象与色面关系的设计传统；常见横竖构造，但运动内部并非只有一种规则。",
+      "essential": "少量线与色面建立明确比例和秩序。",
+      "method_guidance": "模块按内容确定分区与留白，装饰性格线不冒充数据表或实际流程。",
+      "visual_parameters": {
+        "色彩": "原色与黑白可作起点，按明确品牌约束转译",
+        "线条": "规整直线与清楚边界",
+        "造型": "矩形块面；需要斜线时说明所取语言",
+        "光影": "平涂、无体积为主",
+        "材质": "平滑色面，不需要纸纹",
+        "字体气质": "中性几何无衬线"
+      },
+      "recipe_candidates": [
+        "geometric-flat"
+      ],
+      "independent_requirements": "独立调整比例和色面即可，不把一张名画的构图直接移植为模板。",
+      "application": "适合图形海报、章节背景与分区装饰；正文区保留大块安静底色。",
+      "do_not_infer": "不自动复制名画、签名或固定三色数值。",
+      "source_keys": [
+        "de-stijl"
+      ],
+      "card": "de-stijl.md"
+    },
+    {
+      "id": "art-deco",
+      "name": "装饰艺术",
+      "english": "Art Deco",
+      "group": "tradition",
+      "aliases": [
+        "装饰艺术",
+        "Art Deco",
+        "装饰艺术风",
+        "ArtDeco",
+        "Deco风"
+      ],
+      "meaning": "融合几何、工艺与多种装饰来源的设计语言，黑金不是其唯一表现。",
+      "essential": "有节奏的几何装饰、精致边缘与清楚主体。",
+      "method_guidance": "模块可借鉴轴线、重复节奏与框饰；层级和留白仍按内容决定。",
+      "visual_parameters": {
+        "色彩": "深浅对比、宝石色或柔和色均可；金属色可选",
+        "线条": "细密规整线、阶梯或放射节奏",
+        "造型": "几何化对象和装饰轮廓",
+        "光影": "平涂或少量金属高光",
+        "材质": "平滑色面或克制印刷，金属色只在内容需要时使用",
+        "字体气质": "几何展示字搭配清楚正文"
+      },
+      "recipe_candidates": [
+        "serif-editorial",
+        "geometric-flat",
+        "technical-line"
+      ],
+      "independent_requirements": "几何装饰可自主设计；不需要装饰性工艺材质才能满足名称。",
+      "application": "适合文化、展览或仪式性海报；PPT封面适量装饰，内容页减少框饰。",
+      "do_not_infer": "不默认黑金、奢侈品标志、埃及符号或历史装饰原样复制。",
+      "source_keys": [
+        "art-deco"
+      ],
+      "card": "art-deco.md"
+    },
+    {
+      "id": "art-nouveau",
+      "name": "新艺术",
+      "english": "Art Nouveau",
+      "group": "tradition",
+      "aliases": [
+        "新艺术",
+        "Art Nouveau",
+        "新艺术运动",
+        "新艺术风格"
+      ],
+      "meaning": "强调流动线、自然形态与结构装饰结合的传统，也有几何化变体。",
+      "essential": "流动有机线与主题对象协调，装饰服务主体识别。",
+      "method_guidance": "模块可参考框饰、轮廓呼应与字图连贯，正文和图表区域保持清楚。",
+      "visual_parameters": {
+        "色彩": "自然色、低饱和或鲜明色均可，按内容选择",
+        "线条": "蜿蜒曲线与连贯轮廓",
+        "造型": "有机形态或几何化自然轮廓",
+        "光影": "平面淡彩或柔和明暗",
+        "材质": "平滑印刷、墨线或淡彩纸面",
+        "字体气质": "与曲线呼应的展示字，正文避免繁复"
+      },
+      "recipe_candidates": [
+        "hand-ink",
+        "watercolor-paper"
+      ],
+      "independent_requirements": "线稿与水彩只提供媒介；曲线和主题关系按内容自主设计，不将某种东方技法视为其同义词。",
+      "application": "适合文化生态类海报和装饰；PPT把繁饰收至边缘，密集关系图减装饰。",
+      "do_not_infer": "不自动添加女性人物、鲜花、某艺术家签名或固定复古框。",
+      "source_keys": [
+        "art-nouveau"
+      ],
+      "card": "art-nouveau.md"
+    },
+    {
+      "id": "memphis",
+      "name": "孟菲斯",
+      "english": "Memphis Design",
+      "group": "tradition",
+      "aliases": [
+        "孟菲斯",
+        "Memphis Design",
+        "Memphis",
+        "孟菲斯风格"
+      ],
+      "meaning": "带有鲜明色块、几何图案与材料混搭的后现代设计语言。",
+      "essential": "轻松、鲜明的图形节奏；控制图案数量和主次。",
+      "method_guidance": "模块决定散点、重复和动势，不能让装饰取代阅读路径。",
+      "visual_parameters": {
+        "色彩": "鲜明撞色或受控粉彩，可按品牌减色",
+        "线条": "粗轮廓、短线、波浪和点状图案",
+        "造型": "几何与不规则形并置",
+        "光影": "平涂或少量硬边体积",
+        "材质": "平滑图形或可选塑料层压触感",
+        "字体气质": "活泼展示字配清楚正文"
+      },
+      "recipe_candidates": [
+        "clean-flat",
+        "marker-doodle",
+        "soft-3d"
+      ],
+      "independent_requirements": "材料不是必选；自主用少量图形即可传达，避免所有图案同时出现。",
+      "application": "适合活动和创意海报；PPT封面可活泼，背景与流程使用少图案版本。",
+      "do_not_infer": "不自动添加家具、豹纹、玩具或艳色全套。",
+      "source_keys": [
+        "memphis"
+      ],
+      "card": "memphis.md"
+    },
+    {
+      "id": "pop-art",
+      "name": "波普艺术",
+      "english": "Pop Art",
+      "group": "tradition",
+      "aliases": [
+        "波普艺术",
+        "Pop Art",
+        "波普",
+        "波普风格"
+      ],
+      "meaning": "借用流行与商业文化的艺术语言；漫画网点、重复与广告式色块都是可选路径。",
+      "essential": "让主题对象具有直接、鲜明和可识别的视觉表达。",
+      "method_guidance": "模块按内容选择重复、对比与标题节奏，不机械加爆炸气泡。",
+      "visual_parameters": {
+        "色彩": "鲜明色彩或双色高反差",
+        "线条": "硬边轮廓、可选粗描边",
+        "造型": "简化的真实对象或漫画化对象",
+        "光影": "平涂或制版明暗",
+        "材质": "平面印刷；网点和套色可选",
+        "字体气质": "醒目展示字，准确文案保持清楚"
+      },
+      "recipe_candidates": [
+        "geometric-print",
+        "duotone-photo",
+        "clean-flat"
+      ],
+      "independent_requirements": "可自主用重复摄影或纯平面，不必画漫画或添加网点。",
+      "application": "适合宣传与活动海报；工作PPT用于关键强调，内容页控制饱和度和密度。",
+      "do_not_infer": "不自动加入商品品牌、明星、拟声词或广告数据。",
+      "source_keys": [
+        "pop-art",
+        "pop-prompt"
+      ],
+      "card": "pop-art.md"
+    },
+    {
+      "id": "minimal-design",
+      "name": "简约设计",
+      "english": "Minimal Design",
+      "group": "work-language",
+      "aliases": [
+        "简约设计",
+        "Minimal Design",
+        "极简",
+        "极简风",
+        "极简主义",
+        "Minimalism",
+        "Minimalist Design"
+      ],
+      "meaning": "工作设计里通常指减少非必要元素与装饰；艺术运动Minimalism有自己的历史和材料语境。",
+      "essential": "保留足以表达核心信息的元素、层级与可读性。",
+      "method_guidance": "取舍、留白和信息层级交模块；不得用简约为由删除必要流程、数值或限定条件。",
+      "visual_parameters": {
+        "色彩": "少量有功能的颜色，不限黑白",
+        "线条": "清楚、克制，按对象选择",
+        "造型": "简明而保留识别特征",
+        "光影": "平涂或自然柔光",
+        "材质": "低纹理；可有必要真实材质",
+        "字体气质": "易读且层级明确，不一律细字"
+      },
+      "recipe_candidates": [
+        "neutral-sans",
+        "studio-product",
+        "serif-editorial",
+        "soft-3d"
+      ],
+      "independent_requirements": "可直接自主设计；用户谈艺术运动时按该语境解释，不把所有简约工作图称为历史作品。",
+      "application": "适合大多数工作配图；复杂内容以分层展开实现简洁，不能减掉关键连接。",
+      "do_not_infer": "不默认黑白、极细灰字、巨大空白或删减事实。",
+      "source_keys": [
+        "minimalism",
+        "swiss-prompt"
+      ],
+      "card": "minimal-design.md"
+    },
+    {
+      "id": "flat-design",
+      "name": "扁平设计",
+      "english": "Flat Design",
+      "group": "work-language",
+      "aliases": [
+        "扁平设计",
+        "Flat Design",
+        "扁平化",
+        "扁平风",
+        "平面化设计"
+      ],
+      "meaning": "以清楚色面与形状表达对象，减弱装饰性仿真体积。",
+      "essential": "易辨认的形状、对比和语义；阴影可少量服务层级。",
+      "method_guidance": "模块安排对象与关系，形状简化不改变含义。",
+      "visual_parameters": {
+        "色彩": "清楚色块与有限语义色",
+        "线条": "无描边或统一描边",
+        "造型": "简化轮廓与基础几何",
+        "光影": "平涂为主，可有克制层次",
+        "材质": "低纹理图形表面",
+        "字体气质": "中性、清楚的字形"
+      },
+      "recipe_candidates": [
+        "clean-flat",
+        "geometric-flat"
+      ],
+      "independent_requirements": "硬边剪影仅在需要强剪影时使用，普通扁平解释图自主处理。",
+      "application": "适合流程、架构、概念和独立素材；背景注意与正文反差。",
+      "do_not_infer": "不自动变成幼儿插画、卡通人物或某固定品牌图标。",
+      "source_keys": [
+        "flat"
+      ],
+      "card": "flat-design.md"
+    },
+    {
+      "id": "neobrutalism",
+      "name": "新粗野主义平面",
+      "english": "Neobrutalism",
+      "group": "work-language",
+      "aliases": [
+        "新粗野主义平面",
+        "Neobrutalism",
+        "新粗野主义",
+        "Neo Brutalism",
+        "Neubrutalism"
+      ],
+      "meaning": "以高反差、粗边框、鲜明色面和硬偏移阴影形成直接的平面视觉。",
+      "essential": "轮廓、色块与硬阴影形成清楚层次，保留可用性。",
+      "method_guidance": "模块按内容安排块体和标题；视觉强烈不要求故意打乱阅读。",
+      "visual_parameters": {
+        "色彩": "强反差，鲜明信号色配中性色",
+        "线条": "粗硬边框，线宽有层级",
+        "造型": "简明块面和清楚轮廓",
+        "光影": "硬边偏移阴影，不用柔糊光晕",
+        "材质": "平滑图形或少量原始印刷触感",
+        "字体气质": "粗重直接的字形，正文清楚"
+      },
+      "recipe_candidates": [
+        "hard-edge-graphic",
+        "geometric-flat",
+        "bold-type"
+      ],
+      "independent_requirements": "自主补足硬阴影与边框即可；不必复制来源模板的分格布局。",
+      "application": "适合强信息海报和重点页；PPT背景减少边框数量，关系图保持线条区分。",
+      "do_not_infer": "不自动加Bento、怪诞字、混凝土建筑或故意不可读排版。",
+      "source_keys": [
+        "neobrutalism",
+        "duotone-prompt"
+      ],
+      "card": "neobrutalism.md"
+    },
+    {
+      "id": "corporate-modernism",
+      "name": "企业现代主义",
+      "english": "Corporate Modernism",
+      "group": "work-language",
+      "aliases": [
+        "企业现代主义",
+        "Corporate Modernism",
+        "企业现代主义风格",
+        "Mid-Century Corporate",
+        "IBM heritage look"
+      ],
+      "meaning": "用稳定的几何、清楚字形和成套图形语法建立专业身份；此条是工作语言解释，不要求复制某家企业。",
+      "essential": "图形、字形、色彩形成一致且可延展的系统，能够承载产品与证据。",
+      "method_guidance": "模块按内容安排字图、留白和层级；品牌识别不靠一张流程图或一套标志重复。",
+      "visual_parameters": {
+        "色彩": "克制底色与少量有语义的强调色",
+        "线条": "规整边缘、清楚主次",
+        "造型": "几何提炼、产品对象保留身份",
+        "光影": "平涂或受控自然光",
+        "材质": "干净平面为主，印刷可选",
+        "字体气质": "清楚有力量的无衬线，必要正文易读"
+      },
+      "recipe_candidates": [
+        "neutral-sans",
+        "geometric-flat",
+        "studio-product",
+        "technical-line"
+      ],
+      "independent_requirements": "可自主形成新图形系统；只借相关卡的部分参数，不把IBM蓝或条纹当成必需。",
+      "application": "适合产品海报、企业与项目汇报；封面加强身份，解释页减少装饰，证据页尊重真实截图。",
+      "do_not_infer": "不自动加入IBM标志、八道条纹、公司口号、虚构产品界面或成绩。",
+      "source_keys": [
+        "work-ibm",
+        "work-skiff",
+        "work-atera"
+      ],
+      "card": "corporate-modernism.md"
+    },
+    {
+      "id": "contemporary-editorial",
+      "name": "当代编辑视觉",
+      "english": "Contemporary Editorial",
+      "group": "work-language",
+      "aliases": [
+        "当代编辑视觉",
+        "Contemporary Editorial",
+        "编辑视觉",
+        "编辑设计风",
+        "Editorial Design",
+        "杂志气质"
+      ],
+      "meaning": "以有目的的字体、图像与反差形成当代编辑气质；“杂志感”同时可能包含组织要求，需分开处理。",
+      "essential": "图像和文字支持同一主张，字体与图像风格协调。",
+      "method_guidance": "标题、栏位、图注和阅读顺序交模块；不强制六格、划线字或特定期刊模板。",
+      "visual_parameters": {
+        "色彩": "克制底色与清楚强调色，按题材选冷暖",
+        "线条": "图像边缘与少量精确分隔线",
+        "造型": "写实或图形化均可，主体有辨识度",
+        "光影": "自然摄影或平面明暗",
+        "材质": "干净数字或适量纸面，不强制复古",
+        "字体气质": "有辨识度的展示字搭配清楚正文，衬线与无衬线按语境选择"
+      },
+      "recipe_candidates": [
+        "neutral-sans",
+        "serif-editorial",
+        "editorial-photo",
+        "editorial-collage"
+      ],
+      "independent_requirements": "可纯文字主导或真实产品图主导，不需要把所有元素拼贴化。",
+      "application": "适合项目传播、研究故事和产品海报；PPT保留标题层级与图像品质，正文保持可编辑。",
+      "do_not_infer": "不自动加入报纸日期、假引用、装饰小字、虚构采访或无关人物。",
+      "source_keys": [
+        "work-editorial",
+        "work-ppt-images",
+        "work-poster-image"
+      ],
+      "card": "contemporary-editorial.md"
+    },
+    {
+      "id": "monochrome-editorial",
+      "name": "单色编辑印刷",
+      "english": "Monochrome Editorial",
+      "group": "print",
+      "aliases": [
+        "单色编辑印刷",
+        "Monochrome Editorial",
+        "单色editorial",
+        "单色印刷风",
+        "黑白编辑印刷"
+      ],
+      "meaning": "将影像和图形统一到单墨或有限明暗阶，形成清楚、有触感的编辑视觉。",
+      "essential": "主次靠明暗与形态成立，制版特征按用途控制。",
+      "method_guidance": "主视觉与信息层级交模块，单色不删除必要状态区分。",
+      "visual_parameters": {
+        "色彩": "单一墨色与底色，少量强调色仅按任务需要",
+        "线条": "摄影边缘或清楚图形边缘，可局部网点",
+        "造型": "对象轮廓在减色后仍可辨",
+        "光影": "用受控调阶或网点建立明暗",
+        "材质": "纸面、吸墨和半调可选，干净版本也可",
+        "字体气质": "有力量的编辑展示字配清楚正文"
+      },
+      "recipe_candidates": [
+        "geometric-print",
+        "duotone-photo",
+        "editorial-photo"
+      ],
+      "independent_requirements": "单色不是必须做旧；原材料有多状态时保留形状、文字或额外语义编码。",
+      "application": "适合宣传主视觉和章节页；PPT密集内容不满版颗粒化。",
+      "do_not_infer": "不自动添加胶带、污渍、旧日期或巨型无关英文。",
+      "source_keys": [
+        "original"
+      ],
+      "card": "monochrome-editorial.md"
+    },
+    {
+      "id": "duotone-editorial",
+      "name": "双色编辑视觉",
+      "english": "Duotone Editorial",
+      "group": "print",
+      "aliases": [
+        "双色编辑视觉",
+        "Duotone Editorial",
+        "Duotone",
+        "双色调",
+        "双色印刷风"
+      ],
+      "meaning": "以两种主色转译影像与图形，形成鲜明而统一的色调；Bento等分区不是它的必需特征。",
+      "essential": "两色明暗关系清楚，重要对象和文字保留反差。",
+      "method_guidance": "模块负责图片角色、分区与留白；状态数量超过两类时另保持准确颜色或文字编码。",
+      "visual_parameters": {
+        "色彩": "两种有分工的主色，不固定蓝橙",
+        "线条": "保留摄影边缘或清楚轮廓",
+        "造型": "主题对象保留比例与身份",
+        "光影": "双色调阶承载明暗",
+        "材质": "平滑数字或轻印刷触感",
+        "字体气质": "清楚现代字形，字色与底色反差稳定"
+      },
+      "recipe_candidates": [
+        "duotone-photo",
+        "clean-flat"
+      ],
+      "independent_requirements": "可自主转译纯图形；不必同时加入粗野边框、阴影或网点。",
+      "application": "适合产品与活动海报、封面和章节；证据原件保持原貌，转译图按示意使用。",
+      "do_not_infer": "不自动加入Bento、条码、假表格或把不同数据状态并为同一色。",
+      "source_keys": [
+        "duotone-prompt"
+      ],
+      "card": "duotone-editorial.md"
+    },
+    {
+      "id": "risograph",
+      "name": "孔版套色",
+      "english": "Risograph",
+      "group": "print",
+      "aliases": [
+        "孔版套色",
+        "Risograph",
+        "Riso",
+        "Riso Print",
+        "孔版印刷",
+        "Risograph印刷"
+      ],
+      "meaning": "以少色、半透明叠印、颗粒与轻套印差异表达印刷触感；不同于木刻刀痕。",
+      "essential": "颜色叠压与制版颗粒有秩序，关键边缘和文字清楚。",
+      "method_guidance": "模块决定图文和阅读层级，印刷表现不固定上下双联或对象。",
+      "visual_parameters": {
+        "色彩": "少量专色与叠印综合色",
+        "线条": "颗粒边缘和受控制版点",
+        "造型": "概括块面保留主题轮廓",
+        "光影": "靠墨色与叠印建立明暗",
+        "材质": "纸纤维、吸墨和轻错印",
+        "字体气质": "清楚展示字，正文承载区克制"
+      },
+      "recipe_candidates": [
+        "riso-print"
+      ],
+      "independent_requirements": "按内容决定颜色与颗粒强度，不继承固定纸色或题材。",
+      "application": "适合活动、文化、教育海报与章节配图；专业流程标签区减纹理。",
+      "do_not_infer": "不自动加入橙绿、人物、固定标语或随机脏点。",
+      "source_keys": [
+        "original",
+        "riso"
+      ],
+      "card": "risograph.md"
+    },
+    {
+      "id": "blueprint",
+      "name": "工程蓝图语言",
+      "english": "Blueprint",
+      "group": "technical",
+      "aliases": [
+        "工程蓝图语言",
+        "Blueprint",
+        "蓝图风",
+        "工程蓝图",
+        "技术制图风"
+      ],
+      "meaning": "工作设计里常指精密技术线与低干扰底色；投影、结构与尺寸信息需另有真实依据。",
+      "essential": "线条清楚、对象关系准确、装饰与真实连接可区分。",
+      "method_guidance": "投影、剖视、节点和流向由模块按材料确定；不因名称自行加三视图、尺码或结构。",
+      "visual_parameters": {
+        "色彩": "蓝底浅线或浅底深线均可，语义色稳定",
+        "线条": "有主次的精密细线",
+        "造型": "保留真实结构与必要几何概括",
+        "光影": "以轮廓和少量明暗解释体块",
+        "材质": "低纹理底色，网格可选且低干扰",
+        "字体气质": "标签清楚，必要数值与符号准确"
+      },
+      "recipe_candidates": [
+        "technical-line",
+        "clean-flat"
+      ],
+      "independent_requirements": "可自主形成浅色精密图解；不需要假坐标、刻度和条码来显得专业。",
+      "application": "适合机制、架构、设备说明与技术海报；背景网格不能盖过正文。",
+      "do_not_infer": "不添加未经材料支持的尺寸、数学公式、端口、机械零件或数据。",
+      "source_keys": [
+        "work-blueprint"
+      ],
+      "card": "blueprint.md"
+    },
+    {
+      "id": "warm-minimal",
+      "name": "暖调简约",
+      "english": "Warm Minimal",
+      "group": "work-language",
+      "aliases": [
+        "暖调简约",
+        "Warm Minimal",
+        "暖色极简",
+        "温暖简约",
+        "Warm Minimalism"
+      ],
+      "meaning": "以暖中性色、克制边缘和适量柔和材料建立平静亲和感；是工作预设而非独立历史流派。",
+      "essential": "温和氛围与稳定识读共存，必要信息不因柔和而消失。",
+      "method_guidance": "模块决定留白与密度，亲和不要求每个对象圆角卡片化。",
+      "visual_parameters": {
+        "色彩": "暖白、米或石色配受控强调色",
+        "线条": "清楚软硬边对照",
+        "造型": "概括而有识别度，可少量自然形",
+        "光影": "柔光或平涂，阴影适度",
+        "材质": "干净平面、哑光或少量纸面",
+        "字体气质": "易读无衬线或克制衬线，正文反差清楚"
+      },
+      "recipe_candidates": [
+        "serif-editorial",
+        "studio-product",
+        "soft-3d",
+        "atmospheric-light"
+      ],
+      "independent_requirements": "按对象选择媒介，不把所有候选同时叠加；不要求低饱和到底。",
+      "application": "适合培训、教育、服务和工作汇报；背景与装饰保持安静。",
+      "do_not_infer": "不自动加入儿童、植物、奶油玩具或极浅小字。",
+      "source_keys": [
+        "work-presets"
+      ],
+      "card": "warm-minimal.md"
+    },
+    {
+      "id": "dark-monospace",
+      "name": "深色等宽",
+      "english": "Dark Monospace",
+      "group": "technical",
+      "aliases": [
+        "深色等宽",
+        "Dark Monospace",
+        "深色等宽风",
+        "暗色技术排版",
+        "等宽技术风"
+      ],
+      "meaning": "专业技术演示中的深色基底与等宽字形气质；代码、终端和数据必须来自内容。",
+      "essential": "深底高识读、清楚的字形节奏，信号色有克制分工。",
+      "method_guidance": "模块判断代码与技术标记是否必要；中文正文使用合适字形，不为等宽牺牲识读。",
+      "visual_parameters": {
+        "色彩": "近黑或深蓝底，高对比文字和少量信号色",
+        "线条": "细而清楚的技术线",
+        "造型": "简洁几何与真实技术对象",
+        "光影": "平涂或低强度光影",
+        "材质": "干净数字表面，不必CRT与扫描线",
+        "字体气质": "等宽用于代码或短标记，中文正文保持清楚"
+      },
+      "recipe_candidates": [
+        "technical-line",
+        "clean-flat",
+        "atmospheric-light"
+      ],
+      "independent_requirements": "按项目自主选择深色方案；安全项目不因为题材自动选黑客终端。",
+      "application": "适合开发者、基础设施和有真实技术材料的汇报；投影时保证标签反差。",
+      "do_not_infer": "不添加假代码、矩阵雨、凭据、扫描结果或无关命令窗口。",
+      "source_keys": [
+        "work-presets",
+        "work-atera"
+      ],
+      "card": "dark-monospace.md"
+    },
+    {
+      "id": "bold-signal",
+      "name": "高反差明确信号",
+      "english": "Bold Signal",
+      "group": "work-language",
+      "aliases": [
+        "高反差明确信号",
+        "Bold Signal",
+        "高反差品牌平面",
+        "Bold Signal Style",
+        "信号式平面"
+      ],
+      "meaning": "以高反差、少量强色和有力量的字形建立明确焦点，是发布与专业演示的工作预设。",
+      "essential": "主张清楚，强色有目的，视觉不依赖材料炫技。",
+      "method_guidance": "主张、字图比例和焦点交模块；可以文字或真实产品主导，不要求卡片阵列。",
+      "visual_parameters": {
+        "色彩": "黑白或深浅强反差，少量鲜明强调色",
+        "线条": "硬边与明确分隔",
+        "造型": "简明几何或经过提炼的真实对象",
+        "光影": "平涂为主，必要光影克制",
+        "材质": "干净图形表面，可按内容选局部影像",
+        "字体气质": "粗重有力量的字形，正文层级清楚"
+      },
+      "recipe_candidates": [
+        "bold-type",
+        "geometric-flat"
+      ],
+      "independent_requirements": "可自主形成文字或产品视觉，不为名称插入巨大数字或发光背景。",
+      "application": "适合项目发布、主张型海报与封面；内容页降低强色面积。",
+      "do_not_infer": "不添加虚构业绩、夸张口号、营销价格或无关统计。",
+      "source_keys": [
+        "work-presets",
+        "work-skiff"
+      ],
+      "card": "bold-signal.md"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "version": "1.11.0",
+  "checked_on": "2026-11-09",
+  "unique_local_files": 534,
+  "counts": {
+    "scientific-object": 71,
+    "icon": 357,
+    "background": 36,
+    "decoration": 36,
+    "diagram-part": 16,
+    "layout-guide": 18
+  },
+  "families": {
+    "original": 169,
+    "lucide": 292,
+    "opentikz": 8,
+    "phosphor-duotone": 65
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "checked_on": "2026-11-08",
+  "entries": [
+    {
+      "id": "photo-openverse",
+      "name": "Openverse",
+      "url": "https://openverse.org/",
+      "availability": "on-demand",
+      "usage": "照片",
+      "terms": "按条目核验作者与CC许可"
+    },
+    {
+      "id": "photo-commons",
+      "name": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/",
+      "availability": "on-demand",
+      "usage": "照片与历史图形",
+      "terms": "按条目许可；并非统一CC0"
+    },
+    {
+      "id": "photo-unsplash",
+      "name": "Unsplash",
+      "url": "https://unsplash.com/license",
+      "availability": "on-demand",
+      "usage": "摄影",
+      "terms": "按项目获取，保留条目链接，不编入通用图库"
+    },
+    {
+      "id": "icon-tabler",
+      "name": "Tabler Icons",
+      "url": "https://tabler.io/icons",
+      "availability": "on-demand",
+      "usage": "成套符号",
+      "terms": "MIT，按实际复制保留许可"
+    },
+    {
+      "id": "font-noto",
+      "name": "Noto",
+      "url": "https://fonts.google.com/noto/use",
+      "availability": "on-demand",
+      "usage": "中英文与多语言字体",
+      "terms": "OFL，实际字体文件另取"
+    },
+    {
+      "id": "case-moma",
+      "name": "Pentagram MoMA",
+      "url": "https://www.pentagram.com/work/moma",
+      "availability": "reference-only",
+      "usage": "字图与系列",
+      "terms": "仅参考案例，不分发客户素材"
+    },
+    {
+      "id": "case-dumbar",
+      "name": "D&AD 2022",
+      "url": "https://studiodumbar.com/work/d-ad-2022",
+      "availability": "reference-only",
+      "usage": "字形与强度",
+      "terms": "仅参考案例"
+    },
+    {
+      "id": "case-udl",
+      "name": "China TDC 2021",
+      "url": "https://u-d-l.com/work/china-tdc-2021-2/",
+      "availability": "reference-only",
+      "usage": "中文主题视觉",
+      "terms": "仅参考案例"
+    },
+    {
+      "id": "patterns-ibm",
+      "name": "IBM Design Language",
+      "url": "https://www.ibm.com/design/language/illustration/overview/",
+      "availability": "reference-only",
+      "usage": "插画语法",
+      "terms": "不复制品牌身份"
+    },
+    {
+      "id": "catalogue-cookbook",
+      "name": "AI Visual Prompt Cookbook",
+      "url": "https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook",
+      "availability": "reference-only",
+      "usage": "视觉参数",
+      "terms": "未打包预览图；保留具体引用"
+    },
+    {
+      "id": "icon-lucide",
+      "name": "Lucide",
+      "url": "https://github.com/lucide-icons/lucide",
+      "availability": "selected-local",
+      "usage": "线性图标",
+      "terms": "ISC及Feather衍生部分MIT",
+      "head": "53fab88ff9d1b48f4704b5b5b560d6b4d560bf4c",
+      "checked_on": "2026-11-08",
+      "license_file": "LICENSES/LUCIDE-ISC-MIT.txt"
+    },
+    {
+      "id": "icon-phosphor",
+      "name": "Phosphor Icons — Duotone",
+      "url": "https://github.com/phosphor-icons/core",
+      "availability": "selected-local",
+      "usage": "双色图标",
+      "terms": "MIT",
+      "head": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+      "checked_on": "2026-11-08",
+      "license_file": "LICENSES/PHOSPHOR-MIT.txt"
+    }
+  ]
+}

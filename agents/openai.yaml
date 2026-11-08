@@ -1,0 +1,6 @@
+interface:
+  display_name: "工作视觉设计"
+  short_description: "为海报、PPT和计算机科研配图组织内容、选择视觉语言，衔接生图与真实数据绘图并核验结果"
+  default_prompt: "请用 $visual-design 理解我的材料与用途，组织海报、PPT或科研配图，按内容选择或自主设计视觉语言；需要时先给三个标注清楚的方向，配合生图与真实数据绘图完成制作，并核对最终内容、连接和使用尺寸。"
+policy:
+  allow_implicit_invocation: true

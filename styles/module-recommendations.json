@@ -1,0 +1,158 @@
+{
+  "version": "1.11.0",
+  "checked_on": "2026-11-09",
+  "policy": "同一共享路由的用途入口；推荐不是强制、全局排名或第二层路由。按实际内容、已有方案及识读条件选择，随时允许自主设计。",
+  "modules": {
+    "poster": {
+      "recommended": [
+        {
+          "id": "geometric-print",
+          "name": "几何半调印刷",
+          "kind": "recipe",
+          "use": "传播主视觉、工业/技术编辑海报",
+          "condition": "主体和主张适配时优先；文字区控制网点"
+        },
+        {
+          "id": "woodcut-print",
+          "name": "现代木刻套色",
+          "kind": "recipe",
+          "use": "文化、叙事与有明确轮廓的主题",
+          "condition": "内容相容时优先；精密说明不套刻纹"
+        },
+        {
+          "id": "editorial-photo",
+          "name": "编辑摄影",
+          "kind": "recipe",
+          "use": "实际对象、产品身份与应用场景",
+          "condition": "真实截图/证据保留原件，生成场景作为示意"
+        },
+        {
+          "id": "geometric-flat",
+          "name": "纯净几何色面",
+          "kind": "recipe",
+          "use": "现代活动与直接主题图形",
+          "condition": "用形体支持主题，不堆圆方三角"
+        },
+        {
+          "id": "bold-type",
+          "name": "高对比重字形",
+          "kind": "recipe",
+          "use": "有传播力的短标题与文字主张",
+          "condition": "完整关键字优先，字号和位置归海报方法"
+        },
+        {
+          "id": "serif-editorial",
+          "name": "精致衬线编辑",
+          "kind": "recipe",
+          "use": "品质、文化与出版类编辑表达",
+          "condition": "实际中文字体与观看距离可读"
+        }
+      ]
+    },
+    "presentation": {
+      "recommended": [
+        {
+          "id": "neutral-sans",
+          "name": "中性无衬线编辑",
+          "kind": "recipe",
+          "use": "工作汇报、证据与整套母题",
+          "condition": "优先清晰层级和真实材料，避免默认卡片阵列"
+        },
+        {
+          "id": "clean-flat",
+          "name": "简洁平面插画",
+          "kind": "recipe",
+          "use": "概念解释、过程与应用场景",
+          "condition": "对象语义清楚，必要关系完整"
+        },
+        {
+          "id": "technical-line",
+          "name": "精密线描",
+          "kind": "recipe",
+          "use": "架构、流程、边界与技术比较",
+          "condition": "连接准确，小标签有可读体量"
+        },
+        {
+          "id": "soft-3d",
+          "name": "哑光立体",
+          "kind": "recipe",
+          "use": "封面、章节与少量对象说明",
+          "condition": "阴影不吞标签，不能把软件编成实体设备"
+        },
+        {
+          "id": "geometric-flat",
+          "name": "纯净几何色面",
+          "kind": "recipe",
+          "use": "章节、主题图形与简洁比较",
+          "condition": "保持整套语义色，按内容变布局"
+        },
+        {
+          "id": "geometric-print",
+          "name": "几何半调印刷",
+          "kind": "recipe",
+          "use": "主题适合的封面和章节主视觉",
+          "condition": "优先项限适配区域，正文内容图降低纹理"
+        }
+      ]
+    },
+    "research": {
+      "recommended": [
+        {
+          "id": "neutral-technical",
+          "name": "中性精密矢量",
+          "kind": "research-profile",
+          "recipes": [
+            "technical-line",
+            "neutral-sans"
+          ],
+          "use": "正文方法、系统、协议与评估流程",
+          "condition": "具体输入、操作、状态、边界和输出可回读；图标只作必要对象线索"
+        },
+        {
+          "id": "soft-semantic",
+          "name": "柔彩语义分区",
+          "kind": "research-profile",
+          "recipes": [
+            "clean-flat",
+            "neutral-sans"
+          ],
+          "use": "复杂架构、多模块与总览＋细节",
+          "condition": "浅色按职责/状态分区，节点与局部图解比容器更重要，不做浮雕卡片"
+        },
+        {
+          "id": "high-contrast-geometric",
+          "name": "高反差几何技术",
+          "kind": "research-profile",
+          "recipes": [
+            "geometric-flat",
+            "technical-line"
+          ],
+          "use": "关键分支、方法差别、约束与局部机制",
+          "condition": "颜色和形状有明确含义，克制强调，不制造伪热图或额外公式"
+        }
+      ],
+      "conditional": [
+        {
+          "id": "scientific-illustrated",
+          "name": "清爽对象插画",
+          "kind": "research-profile",
+          "recipes": [
+            "clean-flat",
+            "technical-line"
+          ],
+          "use": "有具体对象的Teaser、场景与局部机制"
+        },
+        {
+          "id": "restrained-spatial",
+          "name": "克制哑光空间",
+          "kind": "research-profile",
+          "recipes": [
+            "soft-3d",
+            "precision-3d"
+          ],
+          "use": "体积、几何、设备和确有空间意义的对象"
+        }
+      ]
+    }
+  }
+}

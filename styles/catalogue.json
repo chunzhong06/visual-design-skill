@@ -1,0 +1,973 @@
+{
+  "version": "1.11.0",
+  "checked_on": "2026-11-09",
+  "families": {
+    "photo": "摄影与光学处理",
+    "print": "制版与印刷",
+    "flat": "平面造型",
+    "drawing": "线条与手绘",
+    "paper": "纸本与材料拼贴",
+    "paint": "笔墨与颜料",
+    "dimensional": "立体与表面材质",
+    "atmosphere": "柔光与氛围",
+    "typography": "字形与编辑表面"
+  },
+  "role_names": {
+    "hero": "海报主视觉",
+    "cover": "封面",
+    "background": "背景",
+    "concept": "概念解释",
+    "process": "流程",
+    "architecture": "架构",
+    "comparison": "比较",
+    "scene": "场景",
+    "cutout": "独立素材",
+    "decoration": "装饰"
+  },
+  "density_scope": "实际受风格影响的图像区域，非整页总字量",
+  "styles": [
+    {
+      "id": "geometric-print",
+      "name": "几何半调印刷",
+      "family": "print",
+      "aliases": [
+        "半调",
+        "工业印刷",
+        "摄影网点",
+        "现代主义"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "scene",
+        "decoration"
+      ],
+      "density": [
+        "low",
+        "medium"
+      ],
+      "caution": "密集标签所在区域减弱网点和磨损，避免关键轮廓被噪声淹没",
+      "card": "geometric-print.md",
+      "sources": [
+        {
+          "project": "Nihilist-ZIO/prompt-library",
+          "url": "https://github.com/Nihilist-ZIO/prompt-library/blob/main/cat_%E8%89%BA%E6%9C%AF.md",
+          "license": "CC BY 4.0",
+          "scope": "艺术提示词中的视觉特征；主体、版式和转绘流程另作处理"
+        },
+        {
+          "project": "VigoZhao/AI-Visual-Prompt-Cookbook",
+          "url": "https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook/blob/main/styles/motorsport-technical-editorial/style.json",
+          "license": "仓库LICENSE见来源说明",
+          "scope": "已阅读具体style.json，独立提炼可观察的视觉特征"
+        },
+        {
+          "project": "Monocolor Editorial Print",
+          "url": "https://github.com/yanliudesign/mono-color-skill/blob/main/SKILL.md",
+          "scope": "实际阅读色版、印刷强度及字图关键段落；独立提炼印刷不自动做旧，不沿用固定图幅、色版数量或原布局",
+          "license": "独立转译参数，不复制上游预览素材"
+        }
+      ]
+    },
+    {
+      "id": "woodcut-print",
+      "name": "现代木刻套色",
+      "family": "print",
+      "aliases": [
+        "木刻",
+        "浮世绘",
+        "新版画",
+        "拓印"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "scene",
+        "cutout",
+        "decoration"
+      ],
+      "density": [
+        "low",
+        "medium"
+      ],
+      "caution": "细密流程、连续小字和精密数值优先保持干净承载区",
+      "card": "woodcut-print.md",
+      "sources": [
+        {
+          "project": "Nihilist-ZIO/prompt-library",
+          "url": "https://github.com/Nihilist-ZIO/prompt-library/blob/main/cat_%E8%89%BA%E6%9C%AF.md",
+          "license": "CC BY 4.0",
+          "scope": "艺术提示词中的视觉特征；主体、版式和转绘流程另作处理"
+        }
+      ]
+    },
+    {
+      "id": "editorial-photo",
+      "name": "编辑摄影",
+      "family": "photo",
+      "aliases": [
+        "真实摄影",
+        "工业摄影",
+        "胶片",
+        "模拟质感",
+        "摄影主视觉"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "scene",
+        "cutout"
+      ],
+      "density": [
+        "low",
+        "medium"
+      ],
+      "caution": "实际产品、实验和人物证据优先使用真实材料；生成场景按示意使用",
+      "card": "editorial-photo.md",
+      "sources": [
+        {
+          "project": "Nihilist-ZIO/prompt-library",
+          "url": "https://github.com/Nihilist-ZIO/prompt-library/blob/main/cat_%E8%89%BA%E6%9C%AF.md",
+          "license": "CC BY 4.0",
+          "scope": "艺术提示词中的视觉特征；主体、版式和转绘流程另作处理"
+        },
+        {
+          "project": "VigoZhao/AI-Visual-Prompt-Cookbook",
+          "url": "https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook/blob/main/styles/soft-analog-future-editorial-poster-style/style.json",
+          "license": "仓库LICENSE见来源说明",
+          "scope": "已阅读具体style.json，独立提炼可观察的视觉特征"
+        },
+        {
+          "project": "VigoZhao/AI-Visual-Prompt-Cookbook",
+          "url": "https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook/blob/main/styles/felt-motion-brand-campaign/style.json",
+          "license": "仓库LICENSE见来源说明",
+          "scope": "已阅读具体style.json，独立提炼可观察的视觉特征"
+        },
+        {
+          "project": "VigoZhao/AI-Visual-Prompt-Cookbook",
+          "url": "https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook/blob/main/styles/motorsport-technical-editorial/style.json",
+          "license": "仓库LICENSE见来源说明",
+          "scope": "已阅读具体style.json，独立提炼可观察的视觉特征"
+        },
+        {
+          "project": "Fantastic Posters / corporate-report",
+          "url": "https://github.com/robonuggets/fantastic-posters/blob/main/styles.js",
+          "scope": "提炼摄影与清楚信息承载；不继承原地产、股票代码、Logo、价格和照片比例",
+          "license": "独立转译参数，不复制上游预览素材"
+        }
+      ]
+    },
+    {
+      "id": "clean-flat",
+      "name": "简洁平面插画",
+      "family": "flat",
+      "aliases": [
+        "扁平",
+        "平涂",
+        "简洁插画",
+        "少色插画",
+        "复古平涂"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "concept",
+        "process",
+        "architecture",
+        "comparison",
+        "scene",
+        "cutout"
+      ],
+      "density": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "caution": "删减细节不能改变对象和连接关系",
+      "card": "clean-flat.md",
+      "sources": [
+        {
+          "project": "本技能独立整理",
+          "url": null,
+          "license": null,
+          "scope": "通用视觉参数说明"
+        },
+        {
+          "project": "2slides/awesome-nano-banana-ppt-prompts",
+          "url": "https://github.com/2slides/awesome-nano-banana-ppt-prompts/blob/main/prompts/wpa-national-park-poster-style/prompt.md",
+          "license": "Apache-2.0",
+          "scope": "已阅读实际Prompt Text，提炼少色平涂、复古色调与印刷触感"
+        },
+        {
+          "project": "Nihilist-ZIO/prompt-library",
+          "url": "https://github.com/Nihilist-ZIO/prompt-library/blob/main/cat_%E8%89%BA%E6%9C%AF.md",
+          "license": "CC BY 4.0",
+          "scope": "艺术提示词中的视觉特征；主体、版式和转绘流程另作处理"
+        }
+      ]
+    },
+    {
+      "id": "technical-line",
+      "name": "精密线描",
+      "family": "drawing",
+      "aliases": [
+        "工程线描",
+        "蓝图",
+        "技术线图",
+        "精密轮廓"
+      ],
+      "roles": [
+        "concept",
+        "process",
+        "architecture",
+        "comparison",
+        "scene",
+        "cutout"
+      ],
+      "density": [
+        "medium",
+        "high"
+      ],
+      "caution": "线宽随最终尺寸核对；不把装饰细线当作真实连接",
+      "card": "technical-line.md",
+      "sources": [
+        {
+          "project": "本技能独立整理",
+          "url": null,
+          "license": null,
+          "scope": "通用视觉参数说明"
+        }
+      ]
+    },
+    {
+      "id": "soft-3d",
+      "name": "哑光立体",
+      "family": "dimensional",
+      "aliases": [
+        "哑光3D",
+        "柔和立体",
+        "磨砂",
+        "黏土"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "concept",
+        "scene",
+        "cutout",
+        "decoration"
+      ],
+      "density": [
+        "low",
+        "medium"
+      ],
+      "caution": "避免体块遮挡关系、重阴影吞掉标签或把所有对象卡通化",
+      "card": "soft-3d.md",
+      "sources": [
+        {
+          "project": "本技能独立整理",
+          "url": null,
+          "license": null,
+          "scope": "通用视觉参数说明"
+        }
+      ]
+    },
+    {
+      "id": "atmospheric-light",
+      "name": "柔光渐变",
+      "family": "atmosphere",
+      "aliases": [
+        "氛围",
+        "光带",
+        "渐变",
+        "朦胧几何",
+        "磨砂柔雾"
+      ],
+      "roles": [
+        "background",
+        "cover",
+        "decoration"
+      ],
+      "density": [
+        "low"
+      ],
+      "caution": "数据和正文区避开高光、浓纹理和复杂色阶",
+      "card": "atmospheric-light.md",
+      "sources": [
+        {
+          "project": "本技能独立整理",
+          "url": null,
+          "license": null,
+          "scope": "通用视觉参数说明"
+        },
+        {
+          "project": "Nihilist-ZIO/prompt-library",
+          "url": "https://github.com/Nihilist-ZIO/prompt-library/blob/main/cat_%E8%89%BA%E6%9C%AF.md",
+          "license": "CC BY 4.0",
+          "scope": "艺术提示词中的视觉特征；主体、版式和转绘流程另作处理"
+        },
+        {
+          "project": "Slides AI Plugin / atmospheric backgrounds",
+          "url": "https://github.com/proyecto26/slides-ai-plugin/blob/main/skills/slide-design/references/style-presets.md",
+          "scope": "提炼渐变焦点与内容区域强度分工；不用固定紫蓝色、动画或玻璃卡片",
+          "license": "独立转译参数，不复制上游预览素材"
+        }
+      ]
+    },
+    {
+      "id": "hand-ink",
+      "name": "手绘钢笔线稿",
+      "family": "drawing",
+      "aliases": [
+        "钢笔",
+        "针管笔",
+        "生活速写",
+        "手绘线稿",
+        "装饰细线"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "concept",
+        "scene",
+        "cutout",
+        "decoration"
+      ],
+      "density": [
+        "low",
+        "medium"
+      ],
+      "caution": "结构图需要精确连接时减少抖线，重要标注交排版",
+      "card": "hand-ink.md",
+      "sources": [
+        {
+          "project": "Nihilist-ZIO/prompt-library",
+          "url": "https://github.com/Nihilist-ZIO/prompt-library/blob/main/cat_%E8%89%BA%E6%9C%AF.md",
+          "license": "CC BY 4.0",
+          "scope": "艺术提示词中的视觉特征；主体、版式和转绘流程另作处理"
+        }
+      ]
+    },
+    {
+      "id": "marker-doodle",
+      "name": "马克笔涂鸦",
+      "family": "drawing",
+      "aliases": [
+        "Doodle",
+        "马克笔",
+        "手写涂鸦"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "concept",
+        "scene",
+        "cutout",
+        "decoration"
+      ],
+      "density": [
+        "low",
+        "medium"
+      ],
+      "caution": "涂鸦符号须服务内容，不自动添笑脸、闪电或无意义标记",
+      "card": "marker-doodle.md",
+      "sources": [
+        {
+          "project": "Nihilist-ZIO/prompt-library",
+          "url": "https://github.com/Nihilist-ZIO/prompt-library/blob/main/cat_%E8%89%BA%E6%9C%AF.md",
+          "license": "CC BY 4.0",
+          "scope": "艺术提示词中的视觉特征；主体、版式和转绘流程另作处理"
+        }
+      ]
+    },
+    {
+      "id": "paper-cut",
+      "name": "和纸与剪纸层叠",
+      "family": "paper",
+      "aliases": [
+        "剪纸",
+        "纸艺",
+        "和纸",
+        "胶带拼贴"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "concept",
+        "scene",
+        "cutout",
+        "decoration"
+      ],
+      "density": [
+        "low",
+        "medium"
+      ],
+      "caution": "纤维和叠层不要遮住关键轮廓与标签",
+      "card": "paper-cut.md",
+      "sources": [
+        {
+          "project": "Nihilist-ZIO/prompt-library",
+          "url": "https://github.com/Nihilist-ZIO/prompt-library/blob/main/cat_%E8%89%BA%E6%9C%AF.md",
+          "license": "CC BY 4.0",
+          "scope": "艺术提示词中的视觉特征；主体、版式和转绘流程另作处理"
+        }
+      ]
+    },
+    {
+      "id": "editorial-collage",
+      "name": "摄影纸本拼贴",
+      "family": "paper",
+      "aliases": [
+        "摄影拼贴",
+        "撕纸",
+        "混合媒介",
+        "纸本拼贴"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "scene",
+        "decoration"
+      ],
+      "density": [
+        "low",
+        "medium"
+      ],
+      "caution": "不同媒介有明确分工，不用随机碎片打断真实关系",
+      "card": "editorial-collage.md",
+      "sources": [
+        {
+          "project": "Nihilist-ZIO/prompt-library",
+          "url": "https://github.com/Nihilist-ZIO/prompt-library/blob/main/cat_%E8%89%BA%E6%9C%AF.md",
+          "license": "CC BY 4.0",
+          "scope": "艺术提示词中的视觉特征；主体、版式和转绘流程另作处理"
+        },
+        {
+          "project": "horushe93/ai-image-prompts",
+          "url": "https://github.com/horushe93/ai-image-prompts/blob/master/styles/digital-editorial-collage/prompt-template.json",
+          "license": "MIT",
+          "scope": "已阅读具体参数模板；布局从画风中分离"
+        }
+      ]
+    },
+    {
+      "id": "riso-print",
+      "name": "少色孔版印刷",
+      "family": "print",
+      "aliases": [
+        "Risograph",
+        "Riso",
+        "孔版",
+        "叠印"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "scene",
+        "cutout",
+        "decoration"
+      ],
+      "density": [
+        "low",
+        "medium"
+      ],
+      "caution": "细密文字保持干净承载区，不用随机噪点代替印版结构",
+      "card": "riso-print.md",
+      "sources": [
+        {
+          "project": "Nihilist-ZIO/prompt-library",
+          "url": "https://github.com/Nihilist-ZIO/prompt-library/blob/main/cat_%E8%89%BA%E6%9C%AF.md",
+          "license": "CC BY 4.0",
+          "scope": "艺术提示词中的视觉特征；主体、版式和转绘流程另作处理"
+        },
+        {
+          "project": "VigoZhao/AI-Visual-Prompt-Cookbook",
+          "url": "https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook/blob/main/styles/everyday-riso/style.json",
+          "license": "仓库LICENSE见来源说明",
+          "scope": "已阅读具体style.json，独立提炼可观察的视觉特征"
+        }
+      ]
+    },
+    {
+      "id": "ink-brush",
+      "name": "东方笔墨与书法",
+      "family": "paint",
+      "aliases": [
+        "水墨",
+        "书法",
+        "飞白",
+        "毛笔"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "scene",
+        "cutout",
+        "decoration"
+      ],
+      "density": [
+        "low",
+        "medium"
+      ],
+      "caution": "书法字逐字核对，正文与科学符号不依赖难辨笔势",
+      "card": "ink-brush.md",
+      "sources": [
+        {
+          "project": "Nihilist-ZIO/prompt-library",
+          "url": "https://github.com/Nihilist-ZIO/prompt-library/blob/main/cat_%E8%89%BA%E6%9C%AF.md",
+          "license": "CC BY 4.0",
+          "scope": "艺术提示词中的视觉特征；主体、版式和转绘流程另作处理"
+        }
+      ]
+    },
+    {
+      "id": "watercolor-paper",
+      "name": "透明水彩",
+      "family": "paint",
+      "aliases": [
+        "水彩",
+        "旅行速写",
+        "透明叠色"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "scene",
+        "cutout",
+        "decoration"
+      ],
+      "density": [
+        "low",
+        "medium"
+      ],
+      "caution": "精密箭头和小标签不靠水边渗化表达",
+      "card": "watercolor-paper.md",
+      "sources": [
+        {
+          "project": "Nihilist-ZIO/prompt-library",
+          "url": "https://github.com/Nihilist-ZIO/prompt-library/blob/main/cat_%E8%89%BA%E6%9C%AF.md",
+          "license": "CC BY 4.0",
+          "scope": "艺术提示词中的视觉特征；主体、版式和转绘流程另作处理"
+        }
+      ]
+    },
+    {
+      "id": "optical-motion",
+      "name": "光学动感摄影",
+      "family": "photo",
+      "aliases": [
+        "动感摄影",
+        "运动拖影",
+        "速度感",
+        "光学运动模糊"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "scene"
+      ],
+      "density": [
+        "low"
+      ],
+      "caution": "仅在动作、变化或速度服务内容时使用；关键文字与关系保持清楚",
+      "card": "optical-motion.md",
+      "sources": [
+        {
+          "project": "VigoZhao/AI-Visual-Prompt-Cookbook",
+          "url": "https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook/blob/main/styles/vector-atelier/style.json",
+          "license": "仓库LICENSE见来源说明",
+          "scope": "已阅读具体style.json，独立提炼可观察的视觉特征"
+        }
+      ]
+    },
+    {
+      "id": "duotone-photo",
+      "name": "双色摄影转译",
+      "family": "photo",
+      "aliases": [
+        "双色摄影",
+        "Duotone",
+        "单色调摄影"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "scene",
+        "cutout"
+      ],
+      "density": [
+        "low",
+        "medium"
+      ],
+      "caution": "不能用两种颜色混淆原有多个状态；不强制Bento分区",
+      "card": "duotone-photo.md",
+      "sources": [
+        {
+          "project": "horushe93/ai-image-prompts",
+          "url": "https://github.com/horushe93/ai-image-prompts/blob/master/styles/duotone-bento-box-brutalist-poster/prompt-template.json",
+          "license": "MIT",
+          "scope": "已阅读具体参数模板；布局从画风中分离"
+        }
+      ]
+    },
+    {
+      "id": "neutral-sans",
+      "name": "中性无衬线编辑",
+      "family": "typography",
+      "aliases": [
+        "理性无衬线",
+        "中性编辑",
+        "干净商务",
+        "neutral sans"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "background",
+        "concept",
+        "process",
+        "architecture",
+        "comparison"
+      ],
+      "density": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "caution": "避免所有对象等重、无焦点或默认卡片化；低装饰仍需内容主张",
+      "sources": [
+        {
+          "project": "Pentagram：MoMA",
+          "url": "https://www.pentagram.com/work/moma",
+          "scope": "字图系统与克制表面；独立转译，未复制客户素材",
+          "license": "仅作参数与方法参考；不复制上游预览素材"
+        },
+        {
+          "project": "Duarte",
+          "url": "https://www.duarte.com/blog/4-presentation-design-principles-to-live-by/",
+          "scope": "语义色与成套一致性；独立视觉参数",
+          "license": "仅作参数与方法参考；不复制上游预览素材"
+        },
+        {
+          "project": "Baoyu Slide Deck / editorial-infographic",
+          "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-slide-deck/references/styles/editorial-infographic.md",
+          "scope": "独立提炼标签、图形与强调的编辑层级；不继承固定媒体品牌、字体或强制无摄影",
+          "license": "独立转译参数，不复制上游预览素材"
+        }
+      ],
+      "card": "neutral-sans.md"
+    },
+    {
+      "id": "bold-type",
+      "name": "高对比重字形",
+      "family": "typography",
+      "aliases": [
+        "粗体视觉",
+        "强字形",
+        "重字形",
+        "bold typography"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "decoration"
+      ],
+      "density": [
+        "low",
+        "medium"
+      ],
+      "caution": "完整关键字优先；中文不机械压窄，正文不用极端字形",
+      "sources": [
+        {
+          "project": "Studio Dumbar：D&AD 2022",
+          "url": "https://studiodumbar.com/work/d-ad-2022",
+          "scope": "字形表现与按用途改变强度；独立转译",
+          "license": "仅作参数与方法参考；不复制上游预览素材"
+        },
+        {
+          "project": "VigoZhao/AI-Visual-Prompt-Cookbook",
+          "url": "https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook/blob/main/styles/cream-curve-editorial/style.json",
+          "scope": "实际读取style.json，提炼字形及摄影反差；不继承字图位置和文字",
+          "license": "仅作参数与方法参考；不复制上游预览素材"
+        },
+        {
+          "project": "Pentagram / Type Directors Club",
+          "url": "https://www.pentagram.com/work/type-directors-club",
+          "scope": "借鉴共同视觉规则允许不同字形结果；不复制原字形构造、活动身份、数值和色盘",
+          "license": "独立转译参数，不复制上游预览素材"
+        }
+      ],
+      "card": "bold-type.md"
+    },
+    {
+      "id": "serif-editorial",
+      "name": "精致衬线编辑",
+      "family": "typography",
+      "aliases": [
+        "衬线编辑",
+        "精致编辑",
+        "serif editorial"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "background",
+        "scene",
+        "decoration"
+      ],
+      "density": [
+        "low",
+        "medium"
+      ],
+      "caution": "细衬线在小尺寸下容易丢失；密集解释区改清楚正文",
+      "sources": [
+        {
+          "project": "nexu-io/codex-slides",
+          "url": "https://github.com/nexu-io/codex-slides/blob/master/src/lib/community.ts",
+          "scope": "实际目录的编辑、产品与空间视觉特征；分离结构和表面，不复制预览",
+          "license": "仅作参数与方法参考；不复制上游预览素材"
+        },
+        {
+          "project": "VigoZhao/AI-Visual-Prompt-Cookbook",
+          "url": "https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook/blob/main/styles/quiet-luxury-furniture-nameplate-poster-style/style.json",
+          "scope": "实际读取style.json，提炼棚拍与真实材料；不继承家具、条码、信息条和品牌",
+          "license": "仅作参数与方法参考；不复制上游预览素材"
+        },
+        {
+          "project": "SlideCraft / Paper & Ink",
+          "url": "https://github.com/wellkilo/SlideCraft/blob/main/references/STYLE_PRESETS.md",
+          "scope": "提炼衬线/无衬线分工、轻分隔和中性承载；不继承固定字库、全部衬线或源项目禁用字体清单",
+          "license": "独立转译参数，不复制上游预览素材"
+        }
+      ],
+      "card": "serif-editorial.md"
+    },
+    {
+      "id": "geometric-flat",
+      "name": "纯净几何色面",
+      "family": "flat",
+      "aliases": [
+        "纯净几何",
+        "现代几何",
+        "geometric graphic"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "background",
+        "concept",
+        "process",
+        "comparison",
+        "decoration"
+      ],
+      "density": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "caution": "几何必须支持主题；装饰形状不冒充真实流程和数据",
+      "sources": [
+        {
+          "project": "IBM Design Language",
+          "url": "https://www.ibm.com/design/language/illustration/overview/",
+          "scope": "图形语法与层次；不复制品牌身份",
+          "license": "仅作参数与方法参考；不复制上游预览素材"
+        },
+        {
+          "project": "Pentagram：MoMA",
+          "url": "https://www.pentagram.com/work/moma",
+          "scope": "字图系统与克制表面；独立转译，未复制客户素材",
+          "license": "仅作参数与方法参考；不复制上游预览素材"
+        }
+      ],
+      "card": "geometric-flat.md"
+    },
+    {
+      "id": "studio-product",
+      "name": "棚拍产品质感",
+      "family": "photo",
+      "aliases": [
+        "棚拍",
+        "产品质感",
+        "产品摄影",
+        "studio product"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "scene",
+        "cutout"
+      ],
+      "density": [
+        "low",
+        "medium"
+      ],
+      "caution": "只画有依据的产品身份；软件界面保留真实截图，不虚构实体硬件",
+      "sources": [
+        {
+          "project": "VigoZhao/AI-Visual-Prompt-Cookbook",
+          "url": "https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook/blob/main/styles/quiet-luxury-furniture-nameplate-poster-style/style.json",
+          "scope": "实际读取style.json，提炼棚拍与真实材料；不继承家具、条码、信息条和品牌",
+          "license": "仅作参数与方法参考；不复制上游预览素材"
+        },
+        {
+          "project": "nexu-io/codex-slides",
+          "url": "https://github.com/nexu-io/codex-slides/blob/master/src/lib/community.ts",
+          "scope": "实际目录的编辑、产品与空间视觉特征；分离结构和表面，不复制预览",
+          "license": "仅作参数与方法参考；不复制上游预览素材"
+        }
+      ],
+      "card": "studio-product.md"
+    },
+    {
+      "id": "precision-3d",
+      "name": "精密实体渲染",
+      "family": "dimensional",
+      "aliases": [
+        "精密三维",
+        "精密实体",
+        "硬表面渲染",
+        "precision 3d"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "concept",
+        "scene",
+        "cutout"
+      ],
+      "density": [
+        "low",
+        "medium"
+      ],
+      "caution": "内部构造、接口和剖面须有来源；不能让真实设备或系统变成虚构零件",
+      "sources": [
+        {
+          "project": "nexu-io/codex-slides",
+          "url": "https://github.com/nexu-io/codex-slides/blob/master/src/lib/community.ts",
+          "scope": "实际目录的编辑、产品与空间视觉特征；分离结构和表面，不复制预览",
+          "license": "仅作参数与方法参考；不复制上游预览素材"
+        },
+        {
+          "project": "IBM Design Language",
+          "url": "https://www.ibm.com/design/language/illustration/overview/",
+          "scope": "图形语法与层次；不复制品牌身份",
+          "license": "仅作参数与方法参考；不复制上游预览素材"
+        }
+      ],
+      "card": "precision-3d.md"
+    },
+    {
+      "id": "translucent-optics",
+      "name": "清透折射材质",
+      "family": "dimensional",
+      "aliases": [
+        "清透材质",
+        "折射材质",
+        "透光对象",
+        "translucent optics"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "background",
+        "cutout",
+        "decoration"
+      ],
+      "density": [
+        "low"
+      ],
+      "caution": "折射不扭曲准确文字、图表或真实界面；保持底色反差",
+      "sources": [
+        {
+          "project": "VigoZhao/AI-Visual-Prompt-Cookbook",
+          "url": "https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook/blob/main/styles/prismatic-glass-animal-weekend-editorial/style.json",
+          "scope": "实际读取style.json，提炼局部折射与轮廓；不继承动物、黑底比例和文字",
+          "license": "仅作参数与方法参考；不复制上游预览素材"
+        }
+      ],
+      "card": "translucent-optics.md"
+    },
+    {
+      "id": "optical-stripe",
+      "name": "光学条纹图形",
+      "family": "flat",
+      "aliases": [
+        "光学图形",
+        "条纹图形",
+        "op stripe"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "background",
+        "decoration"
+      ],
+      "density": [
+        "low",
+        "medium"
+      ],
+      "caution": "避免细密摩尔纹和眩晕；条纹不穿越小字、图例和证据区",
+      "sources": [
+        {
+          "project": "VigoZhao/AI-Visual-Prompt-Cookbook",
+          "url": "https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook/blob/main/styles/op-stripe-card-editorial/style.json",
+          "scope": "实际读取style.json，提炼平面条纹与负形；不继承扑克牌、旋涡和模特",
+          "license": "仅作参数与方法参考；不复制上游预览素材"
+        },
+        {
+          "project": "Studio Dumbar：D&AD 2022",
+          "url": "https://studiodumbar.com/work/d-ad-2022",
+          "scope": "字形表现与按用途改变强度；独立转译",
+          "license": "仅作参数与方法参考；不复制上游预览素材"
+        }
+      ],
+      "card": "optical-stripe.md"
+    },
+    {
+      "id": "hard-edge-graphic",
+      "name": "硬边高对比图形",
+      "family": "flat",
+      "aliases": [
+        "新粗野图形",
+        "Neo-Brutalism",
+        "粗边硬阴影"
+      ],
+      "roles": [
+        "hero",
+        "cover",
+        "concept",
+        "comparison",
+        "decoration"
+      ],
+      "density": [
+        "low",
+        "medium"
+      ],
+      "caution": "粗边、硬阴影和强色只用于需要明确力度的区域；密集论文图与小标签不默认采用，不能强制所有对象等重",
+      "sources": [
+        {
+          "project": "corazzon/pptx-design-styles",
+          "url": "https://github.com/corazzon/pptx-design-styles/blob/main/references/styles.md",
+          "scope": "实际读取Neo-Brutalism段落，提炼轮廓、硬阴影和色面；不继承固定字号、坐标与强制卡片布局",
+          "license": "独立转译参数，不复制源代码或预览素材"
+        },
+        {
+          "project": "Fantastic Posters",
+          "url": "https://github.com/robonuggets/fantastic-posters/blob/main/styles.js",
+          "scope": "实际读取brutalist-broadcast，提炼强反差与展示字力度；不继承体育题材、巨型号码、价格或固定三栏",
+          "license": "独立转译参数，不复制完整提示词或示例图"
+        }
+      ],
+      "card": "hard-edge-graphic.md"
+    }
+  ],
+  "selection_note": "用途和内容适配先于偏好；roles/density为候选线索，自主设计与现有配方平等。",
+  "role_policy": {
+    "hero": "强调有身份的主体与主张",
+    "cover": "形成主题身份并预留标题",
+    "background": "降低细节与反差，检查实际文字叠放",
+    "explanation": "完整节点与关系，局部降低材质",
+    "evidence": "真实截图与数据保留原貌，视觉只统一周边"
+  }
+}
